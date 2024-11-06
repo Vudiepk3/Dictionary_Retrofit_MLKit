@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_background"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".78"
+        app:layout_constraintHeight_percent=".80"
         app:layout_constraintVertical_bias="1">
 
         <androidx.viewpager2.widget.ViewPager2
@@ -22,7 +23,7 @@
             android:layout_height="match_parent"
             android:id="@+id/view_pager"
             app:layout_constraintVertical_bias="0"
-            android:background="@drawable/viewpager_bkg"
+            android:background="@drawable/baseline_viewpager_bkg"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,10 +31,10 @@
 
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:id="@+id/tab_layout"
             app:layout_constraintVertical_bias="0"
-            android:background="@drawable/tab_bkg"
+            android:background="@drawable/baseline_tab_bkg"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

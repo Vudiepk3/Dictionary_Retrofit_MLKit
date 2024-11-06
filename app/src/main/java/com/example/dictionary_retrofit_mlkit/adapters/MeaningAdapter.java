@@ -1,5 +1,6 @@
 package com.example.dictionary_retrofit_mlkit.adapters;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,6 +80,7 @@ public class MeaningAdapter extends RecyclerView.Adapter<MeaningAdapter.MeaningV
     }
 
     // Cập nhật dữ liệu mới và thông báo thay đổi
+    @SuppressLint("NotifyDataSetChanged")
     public void updateNewData(List<Meaning> newMeaningList) {
         this.meaningList = newMeaningList;
         notifyDataSetChanged();
