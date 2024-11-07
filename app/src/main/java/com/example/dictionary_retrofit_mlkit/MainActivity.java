@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout; // Khai báo biến TabLayout để chứa các tab
     private ViewPager2 viewPager2; // Khai báo biến ViewPager2 để hiển thị các fragment
-    private ViewPagerAdapter adapter; // Khai báo biến adapter để quản lý các fragment
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Khởi tạo FragmentManager để quản lý các fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
-        adapter = new ViewPagerAdapter(fragmentManager, getLifecycle()); // Khởi tạo adapter với FragmentManager và lifecycle
+        // Khai báo biến adapter để quản lý các fragment
+        ViewPagerAdapter adapter = new ViewPagerAdapter(fragmentManager, getLifecycle()); // Khởi tạo adapter với FragmentManager và lifecycle
         viewPager2.setAdapter(adapter); // Thiết lập adapter cho ViewPager2
 
         // Thiết lập sự kiện khi một tab được chọn

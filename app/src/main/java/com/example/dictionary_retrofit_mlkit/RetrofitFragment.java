@@ -43,7 +43,6 @@ public class RetrofitFragment extends Fragment {
     private TextView wordTextView;
     private TextView phoneticTextView;
     private ProgressBar progressBar;
-    private RecyclerView meaningRecyclerView;
 
     public RetrofitFragment() {
         // Required empty public constructor
@@ -62,7 +61,6 @@ public class RetrofitFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            // TODO: Rename and change types of parameters
             String mParam1 = getArguments().getString("param1");
             String mParam2 = getArguments().getString("param2");
         }
@@ -79,7 +77,7 @@ public class RetrofitFragment extends Fragment {
         wordTextView = view.findViewById(R.id.word_textview);
         phoneticTextView = view.findViewById(R.id.phonetic_textview);
         progressBar = view.findViewById(R.id.progressBar);
-        meaningRecyclerView = view.findViewById(R.id.meaning_recycler_view);
+        RecyclerView meaningRecyclerView = view.findViewById(R.id.meaning_recycler_view);
 
         // Thiết lập sự kiện click cho nút tìm kiếm
         searchBtn.setOnClickListener(v -> {

@@ -94,7 +94,7 @@ public class MLKitFragment extends Fragment {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         // Hiển thị thông báo lỗi nếu việc tải mô hình thất bại
-                        Toast.makeText(requireActivity(), "Model download failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(requireActivity(), "Tải mô hình thất bại", Toast.LENGTH_SHORT).show();
                     }
                 });
         return view; // Trả về view đã được nạp
