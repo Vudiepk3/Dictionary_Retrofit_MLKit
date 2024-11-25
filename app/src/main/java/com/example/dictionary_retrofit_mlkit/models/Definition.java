@@ -15,7 +15,4 @@ public class Definition {
         return definition;
     }
 
-    public void setDefinition(String definition) {
-        this.definition = definition;
-    }
 }

@@ -48,22 +48,10 @@ public class RetrofitFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static RetrofitFragment newInstance(String param1, String param2) {
-        RetrofitFragment fragment = new RetrofitFragment();
-        Bundle args = new Bundle();
-        args.putString("param1", param1);
-        args.putString("param2", param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            String mParam1 = getArguments().getString("param1");
-            String mParam2 = getArguments().getString("param2");
-        }
     }
 
     @Override
@@ -114,7 +102,7 @@ public class RetrofitFragment extends Fragment {
                 // Xử lý lỗi và thông báo cho người dùng
                 mainHandler.post(() -> {
                     setInProgress(false); // Ẩn tiến trình
-                    Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Đã xảy ra lỗi", Toast.LENGTH_SHORT).show();
                 });
             }
         });
